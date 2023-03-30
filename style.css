@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 nav,
 .logo,
 nav ul,
@@ -147,6 +148,7 @@ section:nth-child(3){
     color: #000;
     padding: 2%;
     flex-wrap: wrap;
+    z-index: 1;
 }
 #carrousel{
     width: 360px;
@@ -159,11 +161,11 @@ section:nth-child(3){
     display: flex;
     justify-content: space-between;
     text-align: center;
+    position: relative;  
 }
 .card,
 .card img{
     width: 180px;
-    /* margin-left: 5px; */
     padding: 3px;
 }
 .cardContent{
@@ -235,6 +237,25 @@ footer p{
     margin: auto;
 }
 
+.card.active{
+    margin: auto;
+    margin-top: 5%;
+    width: 500px;
+    height: 480px;
+    border: solid 2px black;
+    padding: 2%;
+    padding-top: 4%;
+    text-align: center;
+    background-color: #ee5058;
+    box-shadow: rgba(100, 100, 111, 0.892) 0px 7px 29px 0px;
+    display: block;
+    position: absolute;
+    top: 2%;
+    left: 33%;
+    position: fixed;
+    z-index: 2000;
+}
+
 /*RESPONSIVE PORTABLE*/
 @media screen and (max-width : 600px){
 
@@ -257,7 +278,22 @@ footer p{
         margin-bottom: 20px;
     }
 
-    .card{
-        /* height: 300px; */
+    .card.active{
+        margin: auto;
+        margin-top: 5%;
+        width: 350px;
+        height: 480px;
+        border: solid 2px black;
+        padding: 2%;
+        padding-top: 4%;
+        text-align: center;
+        background-color: #ee5058;
+        box-shadow: rgba(100, 100, 111, 0.892) 0px 7px 29px 0px;
+        display: block;
+        position: absolute;
+        top: 2%;
+        left: 5%;
+        position: fixed;
     }
+
 }
